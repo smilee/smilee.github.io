@@ -36,12 +36,12 @@
         </div>
       </div>
     </section>
-    <section class="row controls">
+    <section class="row controls" v-if="!gameIsRunning">
       <div class="small-12 columns">
         <button id="start-game">시작</button>
       </div>
     </section>
-    <section class="row controls">
+    <section class="row controls" v-else>
       <div class="small-12 columns">
         <button id="attack">공부</button>
         <button id="special-attack">밤샘</button>
