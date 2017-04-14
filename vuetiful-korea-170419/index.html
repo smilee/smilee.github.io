@@ -21,8 +21,8 @@
         <img class="small-centered columns" src="http://placehold.it/440x400" alt="smilee">
         <h1 class="text-center">smilee</h1>
         <div class="healthbar">
-          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-
+          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: playerHealth + '%'}">
+            {{ playerHealth }}
           </div>
         </div>
       </div>
@@ -30,8 +30,8 @@
         <img class="small-centered columns" src="http://placehold.it/440x400" alt="vue.js">
         <h1 class="text-center">vue.js</h1>
         <div class="healthbar">
-          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;">
-            
+          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: monsterHealth + '%'}">
+            {{ monsterHealth }}
           </div>
         </div>
       </div>
