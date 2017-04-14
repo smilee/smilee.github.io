@@ -38,7 +38,7 @@
     </section>
     <section class="row controls" v-if="!gameIsRunning">
       <div class="small-12 columns">
-        <button id="start-game">시작</button>
+        <button id="start-game" @click="startGame">시작</button>
       </div>
     </section>
     <section class="row controls" v-else>
