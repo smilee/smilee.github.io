@@ -43,10 +43,10 @@
     </section>
     <section class="row controls" v-else>
       <div class="small-12 columns">
-        <button id="attack">공부</button>
-        <button id="special-attack">밤샘</button>
-        <button id="heal">낮잠</button>
-        <button id="give-up">포기</button>
+        <button id="attack" @click="attack">공부</button>
+        <button id="special-attack" @click="specialAttack">밤샘</button>
+        <button id="heal" @click="heal">낮잠</button>
+        <button id="give-up" @click="giveUp">포기</button>
       </div>
     </section>
     <section class="row log">
