@@ -13,6 +13,9 @@ new Vue({
       //initialize healthbars
       this.playerHealth = 100;
       this.monsterHealth = 100;
+
+      //initialize turns
+      this.turns = [];
     },
     attack: function() {
       //player attacks
@@ -32,7 +35,13 @@ new Vue({
     },
     specialAttack: function() {
       //player attacks
-      this.monsterHealth -= this.calculateDamage(10, 20);
+      var damage = this.calculateDamage(10, 20);
+      this.monsterHealth -= damage;
+
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'smilee가 vue.js에게 *' + damage + '*의 피해를 입혔습니다.'
+      });
 
       //check if the player won
       if (this.checkWin()) {
@@ -47,6 +56,10 @@ new Vue({
       } else {
         this.playerHealth = 100;
       }
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'smilee가 ' + 10 + '의 피해를 회복했습니다.'
+      });
       this.monsterAttacks();
     },
     giveUp: function() {
