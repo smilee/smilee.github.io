@@ -49,11 +49,11 @@
         <button id="give-up" @click="giveUp">포기</button>
       </div>
     </section>
-    <section class="row log">
+    <section class="row log" v-if="turns.length > 0">
       <div class="small-12 columns">
         <ul>
-          <li>
-
+          <li v-for="turn in turns">
+            {{ turn.text }}
           </li>
         </ul>
       </div>
