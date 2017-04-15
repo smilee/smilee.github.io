@@ -22,20 +22,31 @@ new Vue({
         return;
       }
 
-      //monster attacks
-      this.playerHealth -= this.calculateDamage(5,12);
-
-      //check if the monster won
-      this.checkWin();
+      this.monsterAttacks();
     },
     specialAttack: function() {
+      //player attacks
+      this.monsterHealth -= this.calculateDamage(10, 20);
 
+      //check if the player won
+      if (this.checkWin()) {
+        return;
+      }
+
+      this.monsterAttacks();
     },
     heal: function() {
 
     },
     giveUp: function() {
 
+    },
+    monsterAttacks: function() {
+      //monster attacks
+      this.playerHealth -= this.calculateDamage(5,12);
+
+      //check if the monster won
+      this.checkWin();
     },
     calculateDamage: function(min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min);
