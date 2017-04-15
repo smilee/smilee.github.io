@@ -3,7 +3,8 @@ new Vue({
   data: {
     playerHealth: 100,
     monsterHealth: 100,
-    gameIsRunning: false
+    gameIsRunning: false,
+    turns: []
   },
   methods: {
     startGame: function() {
@@ -15,7 +16,12 @@ new Vue({
     },
     attack: function() {
       //player attacks
-      this.monsterHealth -= this.calculateDamage(3, 10);
+      var damage = this.calculateDamage(3, 10);
+      this.monsterHealth -= damage;
+      this.turns.unshift({
+        isPlayer: true,
+        text: 'smilee가 vue.js에게 ' + damage + '의 피해를 입혔습니다.'
+      });
 
       //check if the player won
       if (this.checkWin()) {
@@ -48,10 +54,15 @@ new Vue({
     },
     monsterAttacks: function() {
       //monster attacks
-      this.playerHealth -= this.calculateDamage(5,12);
+      var damage = this.calculateDamage(5, 12);
+      this.playerHealth -= damage;
 
       //check if the monster won
       this.checkWin();
+      this.turns.unshift({
+        isPlayer: false,
+        text: 'vue.js가 smilee에게 ' + damage + '의 피해를 입혔습니다.'
+      });
     },
     calculateDamage: function(min, max) {
       return Math.max(Math.floor(Math.random() * max) + 1, min);
