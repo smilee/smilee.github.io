@@ -15,29 +15,18 @@ new Vue({
     },
     attack: function() {
       //player attacks
-      var max = 10;
-      var min = 3;
-      var damage = Math.max(Math.floor(Math.random() * max) + 1, min);
-      this.monsterHealth -= damage;
+      this.monsterHealth -= this.calculateDamage(3, 10);
 
       //check if the player won
-      if (this.monsterHealth <= 0) {
-        alert('You won!');
-        this.gameIsRunning = false;
+      if (this.checkWin()) {
         return;
       }
 
       //monster attacks
-      max = 12;
-      min = 5;
-      damage = Math.max(Math.floor(Math.random() * max) + 1, min);
-      this.playerHealth -= damage;
+      this.playerHealth -= this.calculateDamage(5,12);
 
       //check if the monster won
-      if (this.playerHealth <= 0) {
-        alert('You lost!');
-        this.gameIsRunning = false;
-      }
+      this.checkWin();
     },
     specialAttack: function() {
 
@@ -47,6 +36,27 @@ new Vue({
     },
     giveUp: function() {
 
+    },
+    calculateDamage: function(min, max) {
+      return Math.max(Math.floor(Math.random() * max) + 1, min);
+    },
+    checkWin: function() {
+      if (this.monsterHealth <= 0) {
+        if (confirm('승리! 한번 더 하시겠습니까?')) {
+          this.startGame();
+        } else {
+          this.gameIsRunning = false;
+        }
+        return true;
+      } else if (this.playerHealth <= 0) {
+        if (confirm('패배! 한번 더 하시겠습니까?')) {
+          this.startGame();
+        } else {
+          this.gameIsRunning = false;
+        }
+        return true;
+      }
+      return false;
     }
   }
 });
