@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div id="app">
@@ -18,22 +19,21 @@
     </header>
     <section class="row">
       <div class="small-6 columns">
-        <img class="small-centered columns" src="http://placehold.it/440x400" alt="smilee">
+        <img class="small-centered columns" src="img/smilee.png" alt="smilee">
         <h1 class="text-center">smilee</h1>
         <div class="healthbar">
-          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: playerHealth + '%'}">
-            {{ playerHealth }}
-          </div>
+          <div class="healthstatus text-center">{{ playerHealth }}</div>
+          <div class="healthbar text-center" style="background-color: green; margin: 0;" :style="{width: playerHealth + '%'}"></div>
         </div>
       </div>
       <div class="small-6 columns">
-        <img class="small-centered columns" src="http://placehold.it/440x400" alt="vue.js">
-        <h1 class="text-center">vue.js</h1>
+        <img class="small-centered columns" src="img/vuejs.png" alt="vue.js">
+        <h1 class="text-center">Vue.js</h1>
         <div class="healthbar">
-          <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{width: monsterHealth + '%'}">
-            {{ monsterHealth }}
-          </div>
+          <div class="healthstatus text-center">{{ monsterHealth }}</div>
+          <div class="healthbar text-center" style="background-color: green; margin: 0;" :style="{width: monsterHealth + '%'}"></div>
         </div>
+
       </div>
     </section>
     <section class="row controls" v-if="!gameIsRunning">
