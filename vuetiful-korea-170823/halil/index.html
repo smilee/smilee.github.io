@@ -17,8 +17,6 @@
           <div class="notDone">
             <h2 class="notDone">할 일</h2>
             <transition-group name="totop" tag="ul" class="not-completed" v-if="todo.length > 0" :css="false">
-              <!-- :style="{ height: todo.length * 72 + 'pt'}" -->
-              <!-- enter-active-class="animated swing" leave-active-class="shake" -->
               <li v-for="(item, index) in todo" class="draggable-x" :key="item.item" :value="index">
                 <img src="img/NotCompleted.png" alt="할 일">
                 <div>
