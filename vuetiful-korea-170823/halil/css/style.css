@@ -1,0 +1,216 @@
+h2 {
+  margin: 0 0 20pt 25pt;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  font-weight: 500;
+  color: rgb(0, 188, 126);
+}
+
+li {
+  height: 72pt;
+  padding-left: 25pt;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+li.done {
+  background: none;
+}
+
+span {
+  font-size: 14pt;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+div#app {
+  position: relative;
+  width: 375pt;
+  height: 667pt;
+  margin: 30pt auto;
+  background: rgb(237, 237, 237);
+}
+
+header img {
+  width: 375pt;
+}
+
+#app > img {
+  position: absolute;
+  right: 25pt;
+  bottom: 28pt;
+  width: 60pt;
+  cursor: pointer;
+}
+
+div.contents-wrap {
+  height: 600pt;
+  overflow: hidden;
+}
+
+div.contents {
+  width: 100%;
+  padding: 20pt 0;
+}
+
+span {
+  display: block;
+}
+
+div.notDone {
+  position: relative;
+}
+
+ul.not-completed {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+ul.not-completed li {
+  position: relative;
+}
+
+ul.not-completed img {
+  display: inline-block;
+  width: 26pt;
+  margin-top: 22.5pt;
+  margin-right: 10pt;
+}
+
+ul.not-completed div {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+ul.not-completed span {
+  margin-top: 5pt;
+}
+
+ul.complete {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+ul.complete li {
+  background: rgb(99, 216, 171);
+}
+
+ul.complete img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 20pt;
+  margin: auto 28pt;
+}
+
+ul.completed {
+  overflow: hidden;
+}
+
+ul.completed img {
+  display: inline-block;
+  width: 26pt;
+  margin-top: 22.5pt;
+  margin-right: 10pt;
+}
+
+ul.completed div {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+ul.completed span {
+  margin-top: 5pt;
+}
+
+div.done {
+  position: relative;
+  top: 240pt;
+}
+
+.tada-enter {
+  opacity: 0;
+}
+
+.tada-enter-active {
+  transition: opacity 0.4s;
+  animation: tada-in 0.4s ease-out forwards;
+}
+
+.tada-leave {
+  opacity: 1;
+}
+
+.tada-leave-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes tada-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes tada-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.totop-leave-active {
+  animation: fade-out 0.4s ease-out forwards;
+}
+
+.totop-move {
+  transition: transform 0.4s;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.toleft-enter-active {
+  animation: slide-in 0.4s ease-out forwards;
+}
+
+.toleft-move {
+  transition: transform 0.2s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(600pt);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

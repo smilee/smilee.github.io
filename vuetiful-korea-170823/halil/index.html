@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Halil</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
   </head>
   <body>
     <div id="app">
+      <header>
+        <img src="img/Header.png" alt="헤더">
+      </header>
+      <img src="img/FAB.png" alt="할 일 추가">
+      <div class="contents-wrap">
+        <div class="contents draggable-y">
+          <div class="notDone">
+            <h2 class="notDone">할 일</h2>
+            <transition-group name="totop" tag="ul" class="not-completed" v-if="todo.length > 0" :css="false">
+              <li v-for="(item, index) in todo" class="draggable-x" :key="item.item" :value="index">
+                <img src="img/NotCompleted.png" alt="할 일">
+                <div>
+                  {{ item.item }}<span v-if="item.due">{{ item.due }}</span>
+                </div>
+              </li>
+            </transition-group>
+            <ul class="complete" v-if="todo.length > 0">
+              <li v-for="item in todo" class="draggable-x">
+                <transition name="tada">
+                  <img src="img/CompletedCheck.png" alt="완료" v-if="completed">
+                </transition>
+              </li>
+            </ul>
+          </div>
+          <div class="done">
+            <h2 class="done">완료</h2>
+            <transition-group name="toleft" tag="ul" class="completed" v-if="done.length > 0">
+              <li v-for="item in done" class="draggable-x done" :key="item.item">
+                <img src="img/Completed.png" alt="완료">
+                <div>
+                  {{ item.item }}
+                  <span>
+                    {{ item. due }}
+                  </span>
+                </div>
+              </li>
+            </transition-group>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="/dist/build.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
