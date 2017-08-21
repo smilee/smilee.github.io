@@ -26,9 +26,9 @@ var vm = new Vue({
   created() {
     this.$on('completed', (index) => {
       this.todo[index].done = true;
-      $('div.done').delay(20).animate({
+      $('div.done').delay(20).velocity({
         top: this.todo.length * 72 + 20 + 'pt'
-      }, 700, 'swing', function() {
+      }, 700, 'ease-out', function() {
 
       });
     });
@@ -45,21 +45,16 @@ var vm = new Vue({
       },
       drag: function() {
         var el = $(this).position();
-        el.left > 250? vm.completed = true : vm.completed = false;
+        el.left > 230? vm.completed = true : vm.completed = false;
       },
       stop: function() {
         var el = $(this).position();
         var index = $(this).attr('value');
-        if (el.left < 250) {
-          $(this).animate({
-            left: 0
-          }, 200, 'swing', function() {
-
-          })
+        if (el.left < 230) {
+          $(this).velocity({ left: 0 },[200, 20], { duration: 400 });
         } else {
           var list = $('div.notDone').position();
-          $(this).animate({
-            left: 750
+          $(this).animate({ left: 750
           }, 400, 'swing', function() {
             vm.$emit('completed', index);
           })
