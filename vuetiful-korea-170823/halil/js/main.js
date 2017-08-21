@@ -27,7 +27,7 @@ var vm = new Vue({
     this.$on('completed', (index) => {
       this.todo[index].done = true;
       $('div.done').delay(20).velocity({
-        top: this.todo.length * 72 + 20 + 'pt'
+        top: this.todo.length * 72 + 20 + 'px'
       }, 700, 'ease-out', function() {
 
       });
