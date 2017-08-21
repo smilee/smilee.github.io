@@ -1,16 +1,16 @@
 h2 {
-  margin: 0 0 20pt 25pt;
+  margin: 0 0 20px 25px;
   font-family: 'Roboto', sans-serif;
-  font-size: 14pt;
+  font-size: 14px;
   font-weight: 500;
   color: rgb(0, 188, 126);
 }
 
 li {
-  height: 72pt;
-  padding-left: 25pt;
+  height: 72px;
+  padding-left: 25px;
   font-family: 'Roboto', sans-serif;
-  font-size: 16pt;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.87);
   background: rgb(255, 255, 255);
@@ -23,38 +23,38 @@ li.done {
 }
 
 span {
-  font-size: 14pt;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.54);
 }
 
 div#app {
   position: relative;
-  width: 375pt;
-  height: 667pt;
-  margin: 30pt auto;
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
   background: rgb(237, 237, 237);
 }
 
 header img {
-  width: 375pt;
+  width: 375px;
 }
 
 #app > img {
   position: absolute;
-  right: 25pt;
-  bottom: 28pt;
-  width: 60pt;
+  right: 25px;
+  bottom: 28px;
+  width: 60px;
   cursor: pointer;
 }
 
 div.contents-wrap {
-  height: 600pt;
+  height: 600px;
   overflow: hidden;
 }
 
 div.contents {
   width: 100%;
-  padding: 20pt 0;
+  padding: 20px 0;
 }
 
 span {
@@ -78,9 +78,9 @@ ul.not-completed li {
 
 ul.not-completed img {
   display: inline-block;
-  width: 26pt;
-  margin-top: 22.5pt;
-  margin-right: 10pt;
+  width: 26px;
+  margin-top: 22.5px;
+  margin-right: 10px;
 }
 
 ul.not-completed div {
@@ -93,7 +93,7 @@ ul.not-completed div {
 }
 
 ul.not-completed span {
-  margin-top: 5pt;
+  margin-top: 5px;
 }
 
 ul.complete {
@@ -112,8 +112,8 @@ ul.complete img {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 20pt;
-  margin: auto 28pt;
+  width: 20px;
+  margin: auto 28px;
 }
 
 ul.completed {
@@ -122,9 +122,9 @@ ul.completed {
 
 ul.completed img {
   display: inline-block;
-  width: 26pt;
-  margin-top: 22.5pt;
-  margin-right: 10pt;
+  width: 26px;
+  margin-top: 22.5px;
+  margin-right: 10px;
 }
 
 ul.completed div {
@@ -137,12 +137,12 @@ ul.completed div {
 }
 
 ul.completed span {
-  margin-top: 5pt;
+  margin-top: 5px;
 }
 
 div.done {
   position: relative;
-  top: 240pt;
+  top: 240px;
 }
 
 .tada-enter {
@@ -208,7 +208,7 @@ div.done {
 
 @keyframes slide-in {
   from {
-    transform: translateX(600pt);
+    transform: translateX(600px);
   }
   to {
     transform: translateX(0);
