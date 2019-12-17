@@ -1,11 +1,12 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="https://www.linkedin.com/in/uxplusdev">
     <img alt="Gatsby" src="./src/images/profile.png" width="160" />
   </a>
 </p>
 <h1 align="center">
-  Seungmin Lee - FE Engineers
+  Seungmin Lee
 </h1>
+<h4 align="center">FE Engineer</h4>
 
 Seungmin is an activator interested in delivering value. She aims to define and bring to life product experiences valuable to its users as an UX engineer.
 
