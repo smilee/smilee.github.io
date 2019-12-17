@@ -35,9 +35,20 @@ const Layout = ({ children, t, i18n }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', color: '#414242' }}>
-          <div>© {new Date().getFullYear()}, {t("profile.name")}</div>
-          <div><LanguageMenu /></div>
+        <footer
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: "14px",
+            color: "#414242",
+          }}
+        >
+          <div>
+            © {new Date().getFullYear()}, {t("profile.name")}
+          </div>
+          <div>
+            <LanguageMenu />
+          </div>
         </footer>
       </div>
     </>
