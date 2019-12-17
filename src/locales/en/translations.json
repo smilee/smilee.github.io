@@ -15,91 +15,103 @@
     },
     "languages": {
       "title": "Languages",
-      "content": ["English (Native or bilingual)", "Korean (Native or bilingual)"]
+      "content": [
+        "English (Native or bilingual)",
+        "Korean (Native or bilingual)"
+      ]
     }
   },
   "history": {
-    "experience": [
-      {
-        "company": "Skelter Labs",
-        "title": "UX Engineer",
-        "dates": "November 2018 - June 2019",
-        "location": "Seongdong-gu, Seoul, Korea",
-        "projects": [
-          {
-            "title": "AIQ.AWARE",
-            "description": "hyper-personalization engine analytics",
-            "roles": ["Created custom components", "Customized UI library style"]
-          },
-          {
-            "title": "Skelter UI Library",
-            "description": "Web UI library"
-          }
-        ]
-      },
-      {
-        "company": "AITRICS",
-        "title": "SW Engineer",
-        "dates": "November 2017 - November 2018",
-        "location": "Gangnam-gu, Seoul, Korea",
-        "projects": [
-          {
-            "title": "RiskCare",
-            "description": "long-term chronic disease prediction analytics",
-            "roles": [
-              "Wireframed and developed admin dashboard frontend",
-              "Developed print page layouts for analysis report"
-            ]
-          },
-          {
-            "title": "VitalCare",
-            "description": "real-time in-hospital risk prediction analytics",
-            "roles": ["Developed product dashboard frontend"]
-          }
-        ]
-      },
-      {
-        "company": "AlgoLab",
-        "title": "Product Designer & FE Web Developer",
-        "dates": "January 2017 - November 2017",
-        "location": "Gangnam-gu, Seoul, Korea",
-        "projects": [
-          {
-            "title": "AlgoQuick",
-            "description": "last-mile delivery service",
-            "roles": [
-              "Designed UI/UX of service webpage",
-              "Designed promotional products",
-              "Developed desktop website",
-              "Developed mobile website",
-              "Developed admin dashboards"
-            ]
-          }
-        ]
-      }
-    ],
-    "education": [
-      {
-        "school": "Goldsmiths, University of London",
-        "degree": "Bachelor of Science - BS",
-        "department": "Computer Science",
-        "years": "2019 - Present",
-        "description": "User Experience Specialization"
-      },
-      {
-        "school": "KAIST",
-        "degree": "Bachelor of Science - BS",
-        "department": "Industrial Design",
-        "years": "2010 - 2015",
-        "description": "Graduation with Distinction in Leadership and Community Service"
-      },
-      {
-        "school": "TU Delft",
-        "degree": "Student Exchange Program",
-        "department": "Industrial Design Engineering",
-        "years": "2013 - 2014",
-        "description": "Interactive Environments Minor Program"
-      }
-    ]
+    "experience": {
+      "title": "Experience",
+      "content": [
+        {
+          "company": "Skelter Labs",
+          "title": "UX Engineer",
+          "dates": "November 2018 - June 2019",
+          "location": "Seongdong-gu, Seoul, Korea",
+          "projects": [
+            {
+              "title": "AIQ.AWARE",
+              "description": "hyper-personalization engine analytics",
+              "roles": [
+                "Created custom components",
+                "Customized UI library style"
+              ]
+            },
+            {
+              "title": "Skelter UI Library",
+              "description": "Web UI library"
+            }
+          ]
+        },
+        {
+          "company": "AITRICS",
+          "title": "SW Engineer",
+          "dates": "November 2017 - November 2018",
+          "location": "Gangnam-gu, Seoul, Korea",
+          "projects": [
+            {
+              "title": "RiskCare",
+              "description": "long-term chronic disease prediction analytics",
+              "roles": [
+                "Wireframed and developed admin dashboard frontend",
+                "Developed print page layouts for analysis report"
+              ]
+            },
+            {
+              "title": "VitalCare",
+              "description": "real-time in-hospital risk prediction analytics",
+              "roles": ["Developed product dashboard frontend"]
+            }
+          ]
+        },
+        {
+          "company": "AlgoLab",
+          "title": "Product Designer & FE Web Developer",
+          "dates": "January 2017 - November 2017",
+          "location": "Gangnam-gu, Seoul, Korea",
+          "projects": [
+            {
+              "title": "AlgoQuick",
+              "description": "last-mile delivery service",
+              "roles": [
+                "Designed UI/UX of service webpage",
+                "Designed promotional products",
+                "Developed desktop website",
+                "Developed mobile website",
+                "Developed admin dashboards"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "content": [
+        {
+          "school": "Goldsmiths, University of London",
+          "degree": "Bachelor of Science - BS",
+          "department": "Computer Science",
+          "years": "2019 - Present",
+          "description": "User Experience Specialization"
+        },
+        {
+          "school": "KAIST",
+          "degree": "Bachelor of Science - BS",
+          "department": "Industrial Design",
+          "years": "2010 - 2015",
+          "description": "Graduation with Distinction in Leadership and Community Service"
+        },
+        {
+          "school": "TU Delft",
+          "degree": "Student Exchange Program",
+          "department": "Industrial Design Engineering",
+          "years": "2013 - 2014",
+          "description": "Interactive Environments Minor Program"
+        }
+      ]
+    }
   }
 }
