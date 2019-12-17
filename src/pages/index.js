@@ -1,21 +1,80 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useTranslation } from "react-i18next"
 
-import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Section from "../components/section"
+import Profile from "../components/profile"
+import Introduction from "../components/introduction"
+import History from "../components/history"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const { t, i18n } = useTranslation()
+
+  return (
+    <>
+      <SEO title="Home" />
+      <div
+        style={{
+          display: "flex",
+          marginBottom: `1.45rem`,
+          borderTop: "8px solid #59625a",
+        }}
+      >
+        <aside
+          style={{ maxWidth: `300px`, minHeight: 1096, background: "#59625a" }}
+        >
+          <Profile
+            image={<Image />}
+            name={t("profile.name")}
+            title={t("profile.title")}
+            email={t("profile.email")}
+          />
+          <Introduction
+            summary={
+              <Section
+                fontColor="#f0ecda"
+                title={t("introduction.summary.title")}
+                content={{
+                  type: "paragraph",
+                  data: t("introduction.summary.content"),
+                }}
+              />
+            }
+            skills={
+              <Section
+                fontColor="#f0ecda"
+                title={t("introduction.skills.title")}
+                content={{
+                  type: "list",
+                  data: t("introduction.skills.content"),
+                }}
+              />
+            }
+            language={
+              <Section
+                fontColor="#f0ecda"
+                title={t("introduction.languages.title")}
+                content={{
+                  type: "list",
+                  data: t("introduction.languages.content"),
+                }}
+              />
+            }
+          />
+        </aside>
+        <main
+          style={{
+            flex: 1,
+            padding: "120px 24px 10px",
+            background: "#f0ecda",
+          }}
+        >
+          <History />
+        </main>
+      </div>
+    </>
+  )
+}
 
 export default IndexPage
