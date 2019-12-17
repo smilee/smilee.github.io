@@ -8,11 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { withTrans } from "../i18n/withTrans"
 
-import Header from "./header"
+import LanguageMenu from "./languageMenu"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, t, i18n }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -35,10 +35,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', color: '#414242' }}>
+          <div>© {new Date().getFullYear()}, {t("profile.name")}</div>
+          <div><LanguageMenu /></div>
         </footer>
       </div>
     </>
@@ -49,4 +48,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default withTrans(Layout)
