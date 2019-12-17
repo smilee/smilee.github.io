@@ -1,16 +1,15 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img alt="Gatsby" src="./src/images/profile.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Seungmin Lee - FE Engineer
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Seungmin is an activator interested in delivering value. She aims to define and bring to life product experiences valuable to its users as an UX engineer.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+This resume was created using Gatsby's default starter.
 
 ## 🚀 Quick start
 
