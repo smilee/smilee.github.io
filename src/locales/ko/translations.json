@@ -1,0 +1,105 @@
+{
+  "profile": {
+    "name": "이승민",
+    "title": "프론트엔드 엔지니어",
+    "email": "seungmin@uxplus.dev"
+  },
+  "introduction": {
+    "summary": {
+      "title": "소개",
+      "content": "저는 가치 전달에 관심이 있는 사업형 지휘자입니다. 학부때는 카이스트와 네덜란드에 있는 델프트 공대에서 수학하며 제품과 사용자의 관계를 고찰했습니다. 그리고는 전문성이 있는 통섭형 인재가 되기 위해 컴퓨터 과학 학사과정을 밟으며, 인근 개발자 커뮤니티에서 활동하고 있습니다. UX 엔지니어로 사용자에게 가치있는 경험을 정의하고 구현하는게 꿈입니다."
+    },
+    "skills": {
+      "title": "강점",
+      "content": ["디자인 사고", "자바스크립트 (Vue.js, React)", "CSS (SCSS)"]
+    },
+    "languages": {
+      "title": "언어",
+      "content": ["영어 (원어민 수준)", "한국어 (원어민 수준)"]
+    }
+  },
+  "history": {
+    "experience": [
+      {
+        "company": "스켈터랩스",
+        "title": "UX 엔지니어",
+        "dates": "2018년 11월 - 2019년 6월",
+        "location": "서울시 성동구",
+        "projects": [
+          {
+            "title": "AIQ.AWARE",
+            "description": "초개인화 엔진 분석도구",
+            "roles": ["맞춤 컴포넌트 제작", "맞춤 UI 라이브러리 스타일 제작"]
+          },
+          {
+            "title": "스켈터 UI 라이브러리",
+            "description": "웹 UI 컴포넌트 라이브러리"
+          }
+        ]
+      },
+      {
+        "company": "에이아이트릭스",
+        "title": "SW 엔지니어",
+        "dates": "2017년 11월 - 2018년 11월",
+        "location": "서울시 강남구",
+        "projects": [
+          {
+            "title": "RiskCare",
+            "description": "장기 만성질환 예측 분석도구",
+            "roles": [
+              "관리자 대시보드 프론트엔드의 와이어프레임과 구현 작업",
+              "인쇄용 분석 보고서 페이지 레이아웃 개발"
+            ]
+          },
+          {
+            "title": "VitalCare",
+            "description": "실시간 원내 위험 예측 분석도구",
+            "roles": ["제품 대시보드 프론트엔드 개발"]
+          }
+        ]
+      },
+      {
+        "company": "알고랩",
+        "title": "제품 디자이너 및 프론트엔드 웹 개발자",
+        "dates": "2017년 1월 - 2017년 11월",
+        "location": "서울시 강남구",
+        "projects": [
+          {
+            "title": "알고퀵",
+            "description": "퀵서비스",
+            "roles": [
+              "서비스 페이지 UI/UX 디자인",
+              "홍보물 디자인",
+              "웹사이트 개발",
+              "모바일웹 개발",
+              "관리자 대시보드 개발"
+            ]
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "골드스미스, 런던 대학",
+        "degree": "이학사 - BS",
+        "department": "컴퓨터과학과",
+        "years": "2019년 - 현재",
+        "description": "사용자 경험 전공"
+      },
+      {
+        "school": "카이스트",
+        "degree": "공학사 - BS",
+        "department": "산업디자인학과",
+        "years": "2010년 - 2015년",
+        "description": "리더십 및 봉사 우수 졸업"
+      },
+      {
+        "school": "델프트 공과대학교",
+        "degree": "교환학생 프로그램",
+        "department": "산업디자인공학과",
+        "years": "2013년 - 2014년",
+        "description": "상호작용하는 환경 부전공 프로그램"
+      }
+    ]
+  }  
+}
