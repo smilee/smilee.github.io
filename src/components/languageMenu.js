@@ -12,31 +12,35 @@ const LanguageMenu = props => {
     i18n.changeLanguage(event.target.value)
 
     setValues(oldValues => ({
-      ...oldValues
+      ...oldValues,
     }))
   }
 
   return (
     <>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={e => handleChange(e)}
         type="radio"
         id="english"
         name="language"
         value={"en"}
         defaultChecked
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       />
-      <label htmlFor="english" style={{ marginRight: 8}}>English</label>
+      <label htmlFor="english" style={{ marginRight: 8, cursor: "pointer" }}>
+        English
+      </label>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={e => handleChange(e)}
         type="radio"
         id="korean"
         name="language"
         value={"ko"}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       />
-      <label htmlFor="korean">한국어</label>
+      <label htmlFor="korean" style={{ cursor: "pointer" }}>
+        한국어
+      </label>
     </>
   )
 }
