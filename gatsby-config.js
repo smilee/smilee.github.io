@@ -3,9 +3,11 @@ module.exports = {
     title: `Seungmin Lee - FE Engineer`,
     description: `Seungmin is an activator interested in delivering value. She aims to define and bring to life product experiences valuable to its users as an UX engineer.`,
     author: `@smilee`,
+    siteUrl: 'https://uxplus.dev'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-cname',
     {
       resolve: `gatsby-plugin-layout`,
       options: {
