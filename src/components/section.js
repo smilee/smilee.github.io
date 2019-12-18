@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+import "./section.css"
+
 const Section = ({ fontColor, title, content }) => {
   const renderListItems = listItems => {
     if (!listItems) return
@@ -10,7 +12,7 @@ const Section = ({ fontColor, title, content }) => {
           fontSize: "14px",
           fontWeight: "400",
           color: fontColor,
-          lineHeight: "0.5em",
+          lineHeight: "1.2em",
         }}
         key={listItem}
       >
@@ -44,7 +46,7 @@ const Section = ({ fontColor, title, content }) => {
     }
   }
   return (
-    <section style={{ marginBottom: "2em" }}>
+    <section class="section">
       <header>
         <h2
           style={{

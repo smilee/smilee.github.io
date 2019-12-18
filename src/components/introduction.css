@@ -1,0 +1,10 @@
+.introduction {
+  padding: 40px 24px 12px;
+  background: #59625a;
+}
+
+@media only screen and (max-width: 480px) {
+  .introduction {
+    padding: 40px 24px 32px;
+  }
+}

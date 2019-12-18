@@ -1,12 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+import "./introduction.css"
+
 const Introduction = ({ summary, skills, language }) => (
-  <article
-    style={{
-      padding: "40px 24px 16px",
-      background: "#59625a",
-    }}
+  <article class="introduction"
   >
     {summary}
     {skills}

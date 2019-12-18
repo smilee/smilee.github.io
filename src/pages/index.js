@@ -7,6 +7,7 @@ import Section from "../components/section"
 import Profile from "../components/profile"
 import Introduction from "../components/introduction"
 import History from "../components/history"
+import "./index.css"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
@@ -17,13 +18,11 @@ const IndexPage = () => {
       <div
         style={{
           display: "flex",
-          marginBottom: `1.45rem`,
+          flexWrap: "wrap",
           borderTop: "8px solid #59625a",
         }}
       >
-        <aside
-          style={{ maxWidth: `300px`, minHeight: 1096, background: "#59625a" }}
-        >
+        <aside id="aside">
           <Profile
             image={<Image />}
             name={t("profile.name")}
@@ -63,13 +62,7 @@ const IndexPage = () => {
             }
           />
         </aside>
-        <main
-          style={{
-            flex: 1,
-            padding: "120px 24px 10px",
-            background: "#f0ecda",
-          }}
-        >
+        <main id="main">
           <History />
         </main>
       </div>

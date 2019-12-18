@@ -1,0 +1,9 @@
+.education {
+  margin-bottom: 1.4em;
+}
+
+@media only screen and (max-width: 480px) {
+  .education:last-of-type {
+    margin-bottom: 0;
+  }
+}

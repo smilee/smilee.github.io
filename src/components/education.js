@@ -1,6 +1,8 @@
 import PropTypes from "prop-types"
 import React from "react"
 
+import "./education.css"
+
 const Education = ({
   fontColor,
   school,
@@ -10,13 +12,14 @@ const Education = ({
   description,
 }) => {
   return (
-    <article style={{ marginBottom: "1.4em" }}>
-      <header style={{ marginBottom: "0.5em" }}>
+    <article class="education">
+      <header style={{ marginBottom: "0.2em" }}>
         <h3
           style={{
-            marginBottom: "0.75em",
+            marginBottom: "0.2em",
             fontSize: "16px",
             fontWeight: "600",
+            lineHeight: "1.4em",
             color: fontColor,
             textTransform: "uppercase",
           }}
@@ -26,9 +29,10 @@ const Education = ({
         <span
           style={{
             display: "block",
-            marginBottom: "0.5em",
+            // marginBottom: "0.5em",
             fontSize: "15px",
             fontWeight: "400",
+            lineHeight: "1.2em",
             color: fontColor,
           }}
         >
@@ -51,7 +55,7 @@ const Education = ({
           style={{
             fontSize: "14px",
             fontWeight: "300",
-            lineHeight: "1.2em",
+            lineHeight: "1.4em",
             color: fontColor,
           }}
         >

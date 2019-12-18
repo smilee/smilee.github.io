@@ -1,0 +1,20 @@
+#aside {
+  max-width: 300px;
+  min-height: 1096px;
+  background: #59625a;
+}
+#main {
+  flex: 1;
+  padding: 178px 24px 12px;
+  background: #f0ecda;
+}
+
+@media only screen and (max-width: 480px) {
+  #aside {
+    max-width: none;
+    min-height: 0;
+  }
+  #main {
+    padding: 40px 24px 32px;
+  }
+}
