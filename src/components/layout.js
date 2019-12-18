@@ -7,39 +7,26 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { withTrans } from "../i18n/withTrans"
 
 import LanguageMenu from "./languageMenu"
 import "./layout.css"
 
-const Layout = ({ children, t, i18n }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <div id="layout">
-        <main>{children}</main>
-        <footer id="footer">
-          <div>
-            © {new Date().getFullYear()}, {t("profile.name")}
-          </div>
-          <div>
-            <LanguageMenu />
-          </div>
-        </footer>
-      </div>
-    </>
-  )
-}
+const Layout = ({ children, t }) => (
+  <>
+    <div id="layout">
+      <main>{children}</main>
+      <footer id="footer">
+        <div>
+          © {new Date().getFullYear()}, {t("profile.name")}
+        </div>
+        <div>
+          <LanguageMenu />
+        </div>
+      </footer>
+    </div>
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

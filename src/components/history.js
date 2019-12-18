@@ -7,7 +7,7 @@ import Experience from "../components/experience"
 import Education from "../components/education"
 
 const History = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <article>

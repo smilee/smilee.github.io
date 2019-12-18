@@ -10,7 +10,7 @@ import History from "../components/history"
 import "./index.css"
 
 const IndexPage = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <>

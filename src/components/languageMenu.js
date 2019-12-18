@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 const LanguageMenu = props => {
-  const { t, i18n } = useTranslation()
+  const { i18n } = useTranslation()
 
-  const [values, setValues] = useState({
+  const [setValues] = useState({
     language: "en",
   })
 
