@@ -4,8 +4,7 @@ import React from "react"
 import "./introduction.css"
 
 const Introduction = ({ summary, skills, language }) => (
-  <article class="introduction"
-  >
+  <article class="introduction">
     {summary}
     {skills}
     {language}
