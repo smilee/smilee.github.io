@@ -20,6 +20,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-cname`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-139142924-2",
+      },
+    },
+    {
       resolve: `gatsby-plugin-layout`,
       options: {
         // add relative path to your layout component
