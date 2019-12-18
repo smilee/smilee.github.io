@@ -1,13 +1,13 @@
 {
   "profile": {
     "name": "Seungmin Lee",
-    "title": "FE Engineer",
+    "title": "Front-End Engineer",
     "email": "seungmin@uxplus.dev"
   },
   "introduction": {
     "summary": {
       "title": "Summary",
-      "content": "Seungmin is an activator interested in delivering value. During her industrial design education at KAIST and at TU Delft, which culminated in a bachelor of science degree, she contemplated the relationship between a product and its users. Determined to become a specializing generalist in the fields of design and development, she is currently pursuing a bachelor of science degree in computer science while contributing to local developer communities by organizing events and sharing her experiences. She aims to define and bring to life product experiences valuable to its users as an UX engineer."
+      "content": "Seungmin is an activator interested in delivering value. Throughout her industrial design degree program, she contemplated the relationship between a product and its users. Determined to become a specializing generalist in the fields of design and development, she is currently pursuing a bachelor of science degree in computer science while contributing to local developer communities by organizing events and sharing her experiences. She aims to define and bring to life product experiences valuable to its users as an UX engineer."
     },
     "skills": {
       "title": "Top Skills",
@@ -55,20 +55,20 @@
               "title": "RiskCare",
               "description": "long-term chronic disease prediction analytics",
               "roles": [
-                "Wireframed and developed admin dashboard frontend",
+                "Wireframed and developed admin dashboard front-end",
                 "Developed print page layouts for analysis report"
               ]
             },
             {
               "title": "VitalCare",
               "description": "real-time in-hospital risk prediction analytics",
-              "roles": ["Developed product dashboard frontend"]
+              "roles": ["Developed product dashboard front-end"]
             }
           ]
         },
         {
           "company": "AlgoLab",
-          "title": "Product Designer & FE Web Developer",
+          "title": "Product Designer & Front-End Web Developer",
           "dates": "January 2017 - November 2017",
           "location": "Gangnam-gu, Seoul, Korea",
           "projects": [
