@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Seungmin Lee - FE Engineer`,
+    title: `Seungmin Lee — Front-End Engineer`,
     description: `Seungmin is an activator interested in delivering value. She aims to define and bring to life product experiences valuable to its users as an UX engineer.`,
+    keywords: [`design thinking`, `user experience`, `user experience engineer`, `ux engineer`, `frontend developer`, `frontend engineer`, `fe engineer`, `frontend development`, `frontend web developer`],
     author: `@smilee`,
     siteUrl: 'https://uxplus.dev'
   },
