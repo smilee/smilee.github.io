@@ -1,13 +1,15 @@
 import i18next from "i18next"
 
-i18next.init({
+import LanguageDetector from "i18next-browser-languagedetector"
+
+i18next.use(LanguageDetector).init({
   fallbackLng: "en",
   resources: {
-    ko: {
-      translations: require("../locales/ko/translations.json"),
-    },
     en: {
       translations: require("../locales/en/translations.json"),
+    },
+    ko: {
+      translations: require("../locales/ko/translations.json"),
     },
   },
   ns: ["translations"],
@@ -22,6 +24,6 @@ i18next.init({
   },
 })
 
-i18next.languages = ["ko", "en"]
+i18next.languages = ["en", "ko"]
 
 export default i18next
