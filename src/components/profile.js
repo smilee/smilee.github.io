@@ -41,6 +41,7 @@ const Profile = ({ image, name, title, email }) => (
         color: "#414242",
       }}
       href="http://www.linkedin.com/in/uxplusdev"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <FaLinkedin />
