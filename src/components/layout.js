@@ -18,7 +18,7 @@ const Layout = ({ children, t }) => (
       <main>{children}</main>
       <footer id="footer">
         <div>
-          © {new Date().getFullYear()}, {t("profile.name")}
+          © {new Date().getFullYear()} {t("profile.name")}
         </div>
         <div>
           <LanguageMenu />

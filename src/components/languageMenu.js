@@ -1,19 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { useTranslation } from "react-i18next"
 
 const LanguageMenu = props => {
   const { i18n } = useTranslation()
 
-  const [setValues] = useState({
-    language: "en",
-  })
-
   function handleChange(event) {
     i18n.changeLanguage(event.target.value)
-
-    setValues(oldValues => ({
-      ...oldValues,
-    }))
   }
 
   return (
@@ -24,7 +16,6 @@ const LanguageMenu = props => {
         id="english"
         name="language"
         value={"en"}
-        defaultChecked
         style={{ display: "none" }}
       />
       <label htmlFor="english" style={{ marginRight: 8, cursor: "pointer" }}>
