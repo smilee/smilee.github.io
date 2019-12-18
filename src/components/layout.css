@@ -205,6 +205,7 @@ body {
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
+  word-break: keep-all !important;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
