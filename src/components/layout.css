@@ -635,7 +635,7 @@ pre tt:after {
 #footer {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 12px;
   font-size: 14px;
 }
 @media only screen and (max-width: 480px) {
@@ -646,7 +646,7 @@ pre tt:after {
     padding: 0;
   }
   #footer {
-    padding: 20px 24px 24px;
+    padding: 16px 24px 20px;
     color: #f0ecda;
     background: #80786d;
   }
