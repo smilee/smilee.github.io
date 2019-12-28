@@ -112,6 +112,121 @@
           "description": "Interactive Environments Minor Program"
         }
       ]
+    },
+    "publication": {
+      "title": "Publications",
+      "content": [
+        {
+          "title": "Proto UI",
+          "date": "Jul 2019",
+          "publication": "Microsoftware, volume 397",
+          "publisher": "IT Chosun"
+        },
+        {
+          "title": "The Design Revolution and the Front-End Unicorn",
+          "date": "Jul 2018",
+          "publication": "Microsoftware, volume 393",
+          "publisher": "IT Chosun"
+        }
+      ]
+    },
+    "organization": {
+      "title": "Organization",
+      "content": [
+        {
+          "organization": "Vue.js Korea",
+          "dates": "Dec 2017 - Aug 2018",
+          "title": "Meetup Organizer",
+          "events": [
+            {
+              "title": "Vuetiful Korea - Fifth Meetup",
+              "date": "August 8, 2018",
+              "roles": [
+                "Organized and managed meetup",
+                "Designed and ordered goodies"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/fifth"
+            },
+            {
+              "title": "Vuetiful Korea - Fourth Meetup",
+              "date": "April 17, 2018",
+              "roles": [
+                "Organized and managed meetup",
+                "Participated in the development of the promotional website",
+                "Designed and ordered goodies"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/fourth"
+            },
+            {
+              "title": "Vuetiful Korea - Third Meetup",
+              "date": "December 1, 2017",
+              "roles": [
+                "Organized and managed meetup",
+                "Developed a game for the networking session",
+                "Designed and ordered goodies"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/third"
+            }
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "title": "Presentations",
+      "content": [
+        {
+          "date": "June 23, 2019",
+          "host": "JavaScript Community Union",
+          "title": "JavaScript is Everywhere",
+          "subject": "Proto UI",
+          "url": "https://festa.io/events/324"
+        },
+        {
+          "date": "March 16, 2019",
+          "host": "Although this is unrelated to coding,",
+          "title": "Although this is unrelated to front-end,",
+          "subject": "Generalist or Specialist?",
+          "url": "https://festa.io/events/212"
+        },
+        {
+          "date": "December 15, 2018",
+          "host": "Microsoftware",
+          "title": "Microsoftware Conference 2018",
+          "subject": "2080 Life",
+          "url": "https://www.imaso.co.kr/masocon2018/"
+        },
+        {
+          "date": "May 26, 2018",
+          "host": "MeltingCon Community Alliance",
+          "title": "MeltingCon 2018",
+          "subject": "How to Start a Vue.js Project",
+          "url": "https://meltingcon.github.io/2018/about/"
+        },
+        {
+          "date": "August 23, 2017",
+          "host": "Vue.js Korea",
+          "title": "Vuetiful Korea",
+          "subject": "Vuetiful Animations",
+          "url": "https://vuejs-kr.github.io/meetup/#/second"
+        },
+        {
+          "date": "April 19, 2017",
+          "host": "Vue.js Korea",
+          "title": "Vuetiful Korea",
+          "subject": "Vue.js Step-by-Step",
+          "url": "https://vuejs-kr.github.io/meetup/#/first"
+        }
+      ]
+    },
+    "patent": {
+      "title": "Patent",
+      "content": [
+        {
+          "title": "Virtual window apparatus",
+          "date": "May 25, 2018",
+          "number": "kr 1018634300000"
+        }
+      ]
     }
   }
 }

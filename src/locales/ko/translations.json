@@ -46,17 +46,17 @@
           "location": "서울시 강남구",
           "projects": [
             {
+              "title": "VitalCare",
+              "description": "실시간 원내 위험 예측 분석도구",
+              "roles": ["제품 대시보드 프론트엔드 개발"]
+            },
+            {
               "title": "RiskCare",
               "description": "장기 만성질환 예측 분석도구",
               "roles": [
                 "관리자 대시보드 프론트엔드의 와이어프레임과 구현 작업",
                 "인쇄용 분석 보고서 페이지 레이아웃 개발"
               ]
-            },
-            {
-              "title": "VitalCare",
-              "description": "실시간 원내 위험 예측 분석도구",
-              "roles": ["제품 대시보드 프론트엔드 개발"]
             }
           ]
         },
@@ -104,6 +104,123 @@
           "department": "산업디자인공학과",
           "years": "2013년 - 2014년",
           "description": "상호작용하는 환경 부전공 프로그램 이수"
+        }
+      ]
+    },
+    "publication": {
+      "title": "글",
+      "content": [
+        {
+          "title": "Proto UI: 제품 개발 프로세스 UI 라이브러리",
+          "date": "2019년 7월",
+          "publication": "마이크로소프트웨어, volume 397",
+          "publisher": "IT조선",
+          "url": ""
+        },
+        {
+          "title": "디자인의 진화 그리고 프론트엔드 디발자",
+          "date": "2018년 7월",
+          "publication": "마이크로소프트웨어, volume 393",
+          "publisher": "IT조선",
+          "url": "http://it.chosun.com/m/svc/article.html?contid=2018072402322"
+        }
+      ]
+    },
+    "organization": {
+      "title": "단체",
+      "content": [
+        {
+          "organization": "Vue.js 한국어 사용자 모임",
+          "dates": "2017년 12월 - 2018년 8월",
+          "title": "밋업 운영자",
+          "events": [
+            {
+              "title": "Vuetiful Korea 다섯번째 모임",
+              "date": "2018년 8월 8일",
+              "roles": [
+                "100인 규모의 밋업 운영 및 관리",
+                "굿즈 디자인 및 주문"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/fifth"
+            },
+            {
+              "title": "Vuetiful Korea 네번째 모임",
+              "date": "2018년 4월 17일 ",
+              "roles": [
+                "135인 규모의 밋업 운영 및 관리",
+                "홍보용 웹사이트 기획 및 제작 참여",
+                "굿즈 디자인 및 주문"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/fourth"
+            },
+            {
+              "title": "Vuetiful Korea 세번째 모임",
+              "date": "2017년 12월 1일",
+              "roles": [
+                "100인 규모의 밋업 운영 및 관리",
+                "네트워킹 개발 기획 및 개발",
+                "굿즈 디자인 및 주문"
+              ],
+              "url": "https://vuejs-kr.github.io/meetup/#/third"
+            }
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "title": "발표 및 강연",
+      "content": [
+        {
+          "date": "2019년 6월 23일",
+          "host": "자바스크립트 커뮤니티 유니온",
+          "title": "JavaScript is Everywhere",
+          "subject": "Proto UI",
+          "url": "https://festa.io/events/324"
+        },
+        {
+          "date": "2019년 3월 16일",
+          "host": "코딩이랑 무관합니다만,",
+          "title": "프론트엔드와 무관합니다만,",
+          "subject": "당신은 제너럴리스트입니까 스페셜리스트입니까?",
+          "url": "https://festa.io/events/212"
+        },
+        {
+          "date": "2018년 12월 15일",
+          "host": "마이크로소프트웨어",
+          "title": "마소콘 2018",
+          "subject": "2080 라이프",
+          "url": "https://www.imaso.co.kr/masocon2018/"
+        },
+        {
+          "date": "2018년 5월 26일",
+          "host": "멜팅콘 커뮤니티 동맹",
+          "title": "멜팅콘 2018",
+          "subject": "Vue.js 프로젝트 시작하기",
+          "url": "https://meltingcon.github.io/2018/about/"
+        },
+        {
+          "date": "2017년 8월 23일",
+          "host": "Vue.js 한국어 사용자 모임",
+          "title": "Vuetiful Korea 두번째 모임",
+          "subject": "Vuetiful 애니메이션",
+          "url": "https://vuejs-kr.github.io/meetup/#/second"
+        },
+        {
+          "date": "2017년 4월 19일",
+          "host": "Vue.js 한국어 사용자 모임",
+          "title": "Vuetiful Korea 첫번째 모임",
+          "subject": "웹 디자이너의 도전 Vue.js 따라하기",
+          "url": "https://vuejs-kr.github.io/meetup/#/first"
+        }
+      ]
+    },
+    "patent": {
+      "title": "특허",
+      "content": [
+        {
+          "title": "Virtual window apparatus (가상 창문 장치)",
+          "date": "2018년 5월 25일",
+          "number": "kr 1018634300000"
         }
       ]
     }
