@@ -31,13 +31,14 @@ const Section = ({ fontColor, title, content }) => {
               color: fontColor,
               lineHeight: `1.4em`,
             }}
+            key={content.data}
           >
             {content.data}
           </p>
         )
       case "list":
         return (
-          <ul style={{ margin: "0", listStyle: "none" }}>
+          <ul style={{ margin: "0", listStyle: "none" }} key={content.data}>
             {renderListItems(content.data)}
           </ul>
         )
@@ -46,7 +47,7 @@ const Section = ({ fontColor, title, content }) => {
     }
   }
   return (
-    <section class="section">
+    <section className="section">
       <header>
         <h2
           style={{
