@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 import Image from "../components/image"
@@ -12,16 +12,16 @@ import "./index.css"
 const IndexPage = () => {
   const { t } = useTranslation()
 
+  const [isDefaultPage, setDefaultPage] = useState(true)
+
+  useEffect(() => {
+    setDefaultPage(isDefaultPage)
+  }, [isDefaultPage])
+
   return (
     <>
       <SEO title="Home" />
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          borderTop: "8px solid #59625a",
-        }}
-      >
+      <div class="container">
         <aside id="aside">
           <Profile
             image={<Image />}
@@ -63,7 +63,8 @@ const IndexPage = () => {
           />
         </aside>
         <main id="main">
-          <History />
+          <History isDefaultPage={isDefaultPage} />
+          <a id="corner" onClick={() => setDefaultPage(!isDefaultPage)} />
         </main>
       </div>
     </>
