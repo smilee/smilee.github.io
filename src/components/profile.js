@@ -2,14 +2,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import { FaLinkedin } from "react-icons/fa"
 
+import "./profile.css"
+
 const Profile = ({ image, name, title, email }) => (
-  <article
-    style={{
-      padding: "64px 24px 24px",
-      textAlign: "center",
-      background: "#d4cfc2",
-    }}
-  >
+  <article id="profile">
     <div style={{ padding: "0 24px" }}>{image}</div>
     <h1
       style={{
