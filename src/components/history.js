@@ -36,14 +36,6 @@ const History = ({ isDefaultPage }) => {
                         `history.experience.content.${0}.projects.${0}.roles`
                       ),
                     },
-                    {
-                      title: t(
-                        `history.experience.content.${0}.projects.${1}.title`
-                      ),
-                      description: t(
-                        `history.experience.content.${0}.projects.${1}.description`
-                      ),
-                    },
                   ]}
                 />,
                 <Experience
@@ -70,9 +62,6 @@ const History = ({ isDefaultPage }) => {
                       description: t(
                         `history.experience.content.${1}.projects.${1}.description`
                       ),
-                      roles: t(
-                        `history.experience.content.${1}.projects.${1}.roles`
-                      ),
                     },
                   ]}
                 />,
@@ -91,6 +80,36 @@ const History = ({ isDefaultPage }) => {
                       ),
                       roles: t(
                         `history.experience.content.${2}.projects.${0}.roles`
+                      ),
+                    },
+                    {
+                      title: t(
+                        `history.experience.content.${2}.projects.${1}.title`
+                      ),
+                      description: t(
+                        `history.experience.content.${2}.projects.${1}.description`
+                      ),
+                      roles: t(
+                        `history.experience.content.${2}.projects.${1}.roles`
+                      ),
+                    },
+                  ]}
+                />,
+                <Experience
+                  company={t(`history.experience.content.${3}.company`)}
+                  title={t(`history.experience.content.${3}.title`)}
+                  dates={t(`history.experience.content.${3}.dates`)}
+                  location={t(`history.experience.content.${3}.location`)}
+                  projects={[
+                    {
+                      title: t(
+                        `history.experience.content.${3}.projects.${0}.title`
+                      ),
+                      description: t(
+                        `history.experience.content.${3}.projects.${0}.description`
+                      ),
+                      roles: t(
+                        `history.experience.content.${3}.projects.${0}.roles`
                       ),
                     },
                   ]}

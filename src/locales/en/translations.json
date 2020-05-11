@@ -59,7 +59,8 @@
             },
             {
               "title": "Skelter UI Library",
-              "description": "web UI components library"
+              "description": "web UI components library",
+              "roles": []
             }
           ]
         },
