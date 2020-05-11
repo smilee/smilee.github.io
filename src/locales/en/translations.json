@@ -7,7 +7,7 @@
   "introduction": {
     "summary": {
       "title": "Summary",
-      "content": "Seungmin is an activator interested in delivering value. Throughout her industrial design degree program, she contemplated the relationship between a product and its users. Determined to become a specializing generalist in the fields of design and development, she is currently pursuing a bachelor of science degree in computer science while contributing to local developer communities by organizing events and sharing her experiences. She aims to define and bring to life product experiences valuable to its users as an UX engineer."
+      "content": "Seungmin is an activator interested in delivering value. Throughout her industrial design degree program, she contemplated the relationship between a product and its users. Determined to become a specializing generalist in the fields of design and development, she is currently pursuing a bachelor of science degree in computer science while contributing to local developer communities by organizing events and sharing her experiences. She aims to define and bring to life product experiences valuable to its users as a UX engineer."
     },
     "skills": {
       "title": "Top Skills",
@@ -26,10 +26,28 @@
       "title": "Experience",
       "content": [
         {
+          "company": "Savvi",
+          "title": "UX Designer & Frontend Engineer",
+          "dates": "January 2020 - Present",
+          "location": "Gangnam District, Seoul, Korea",
+          "projects": [
+            {
+              "title": "SavviHub",
+              "description": "MLOps tool",
+              "roles": [
+                "Design and conduct product usability test",
+                "Design landing and product",
+                "Contribute to development of landing and product",
+                "Customize UI library style"
+              ]
+            }
+          ]
+        },
+        {
           "company": "Skelter Labs",
           "title": "UX Engineer",
           "dates": "November 2018 - June 2019",
-          "location": "Seongdong-gu, Seoul, Korea",
+          "location": "Seongdong District, Seoul, Korea",
           "projects": [
             {
               "title": "AIQ.AWARE",
@@ -49,7 +67,7 @@
           "company": "AITRICS",
           "title": "SW Engineer",
           "dates": "November 2017 - November 2018",
-          "location": "Gangnam-gu, Seoul, Korea",
+          "location": "Gangnam District, Seoul, Korea",
           "projects": [
             {
               "title": "RiskCare",
@@ -70,7 +88,7 @@
           "company": "AlgoLab",
           "title": "Product Designer & Front-End Web Developer",
           "dates": "January 2017 - November 2017",
-          "location": "Gangnam-gu, Seoul, Korea",
+          "location": "Gangnam District, Seoul, Korea",
           "projects": [
             {
               "title": "AlgoQuick",
