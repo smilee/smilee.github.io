@@ -12,7 +12,7 @@ const Education = ({
   description,
 }) => {
   return (
-    <article class="education">
+    <article className="education">
       <header style={{ marginBottom: "0.2em" }}>
         <h3
           style={{

@@ -21,7 +21,7 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <div class="container">
+      <div className="container">
         <aside id="aside">
           <Profile
             image={<Image />}

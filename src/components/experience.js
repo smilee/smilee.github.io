@@ -14,7 +14,7 @@ const Experience = ({
     return projects.map(project => {
       const renderProjectRoles = roles => {
         if (!roles) return
-        return project.roles.map(role => (
+        return roles.map(role => (
           <li
             style={{
               marginBottom: "0",
