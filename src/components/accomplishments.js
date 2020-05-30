@@ -87,6 +87,12 @@ const Accomplishments = () => {
               title={t(`history.presentation.content.${5}.title`)}
               subject={t(`history.presentation.content.${5}.subject`)}
             />,
+            <Presentation
+              date={t(`history.presentation.content.${6}.date`)}
+              host={t(`history.presentation.content.${6}.host`)}
+              title={t(`history.presentation.content.${6}.title`)}
+              subject={t(`history.presentation.content.${6}.subject`)}
+            />,
           ],
         }}
       />

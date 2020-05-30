@@ -189,6 +189,13 @@
       "title": "발표 및 강연",
       "content": [
         {
+          "date": "2020년 5월 30일",
+          "host": "자바스크립트 개발자 포럼",
+          "title": "JavaScript is Everywhere",
+          "subject": "Beelicious: p5.js로 그리는 JavaScript 세계",
+          "url": "https://js2020.splashthat.com/"
+        },
+        {
           "date": "2019년 6월 23일",
           "host": "자바스크립트 커뮤니티 유니온",
           "title": "JavaScript is Everywhere",

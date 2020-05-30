@@ -194,6 +194,13 @@
       "title": "Presentations",
       "content": [
         {
+          "date": "May 30, 2020",
+          "host": "JavaScript Developer Forums",
+          "title": "JavaScript is Everywhere",
+          "subject": "Beelicious: A world drawn with p5.js",
+          "url": "https://js2020.splashthat.com/"
+        },
+        {
           "date": "June 23, 2019",
           "host": "JavaScript Community Union",
           "title": "JavaScript is Everywhere",
