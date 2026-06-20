@@ -1,0 +1,157 @@
+---
+import Logo from './Logo.astro';
+---
+
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav__logo" aria-label="Back to top">
+    <Logo variant="nav" />
+  </a>
+
+  <div class="nav__actions">
+    <button
+      class="nav__theme-toggle"
+      id="theme-toggle"
+      aria-label="Toggle dark mode"
+      data-cursor="interactive"
+    >
+      <svg
+        class="nav__theme-icon nav__theme-icon--light"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg
+        class="nav__theme-icon nav__theme-icon--dark"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+
+  toggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--gutter);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: nav-in 0.6s var(--ease-out) 3s forwards;
+  }
+
+  @keyframes nav-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav__logo:hover {
+    opacity: 0.7;
+  }
+
+  .nav__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .nav__theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--color-subtle);
+    border-radius: 50%;
+    color: var(--color-text);
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .nav__theme-toggle:hover {
+    background: var(--color-subtle);
+    transform: scale(1.05);
+  }
+
+  .nav__theme-icon {
+    display: block;
+  }
+
+  /* Show/hide icons based on theme */
+  .nav__theme-icon--dark {
+    display: none;
+  }
+
+  :global(.dark) .nav__theme-icon--light {
+    display: none;
+  }
+
+  :global(.dark) .nav__theme-icon--dark {
+    display: block;
+  }
+
+  /* Scrolled state */
+  .nav:global(.nav--scrolled) {
+    background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .nav {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+</style>

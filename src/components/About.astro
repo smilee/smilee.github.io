@@ -1,0 +1,139 @@
+---
+// About section with scroll-triggered reveals
+---
+
+<section class="about" id="about">
+  <div class="about__container">
+    <div class="about__intro reveal">
+      <p class="about__lead">
+        I'm a designer who codes and a developer who designs.
+      </p>
+    </div>
+
+    <div class="about__content stagger">
+      <p>
+        I've built products across healthcare, logistics, and ML infrastructure—
+        health risk dashboards, last-mile delivery platforms, annotation tools,
+        and company-wide design systems. I also took time to go independent:
+        launched a Kickstarter-funded TTRPG, shipped a mobile game, and sold
+        character goods at gaming events.
+      </p>
+
+      <p>
+        I'm most useful on 0-to-1 builds—prototyping fast, validating ideas,
+        and iterating toward something that works. Product direction over
+        premature optimization.
+      </p>
+    </div>
+
+    <div class="about__currently reveal">
+      <h3 class="about__currently-title">Currently</h3>
+      <ul class="about__currently-list">
+        <li>
+          <span class="about__currently-label">Building</span>
+          <span class="about__currently-value">This portfolio</span>
+        </li>
+        <li>
+          <span class="about__currently-label">Learning</span>
+          <span class="about__currently-value">VR, Unity</span>
+        </li>
+        <li>
+          <span class="about__currently-label">Reading</span>
+          <span class="about__currently-value">Designing Design</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: var(--space-xl) var(--gutter);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .about__container {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .about__intro {
+    margin-bottom: var(--space-sm);
+  }
+
+  .about__lead {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .about__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .about__content p {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    line-height: 1.7;
+  }
+
+  /* Currently section */
+  .about__currently {
+    margin-top: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-subtle);
+  }
+
+  .about__currently-title {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+    font-weight: 500;
+  }
+
+  .about__currently-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .about__currently-list li {
+    display: flex;
+    gap: var(--space-md);
+    align-items: baseline;
+  }
+
+  .about__currently-label {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    min-width: 80px;
+  }
+
+  .about__currently-value {
+    font-size: var(--text-base);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .about {
+      padding: var(--space-lg) var(--gutter);
+    }
+
+    .about__lead {
+      font-size: var(--text-xl);
+    }
+  }
+</style>

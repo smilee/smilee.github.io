@@ -1,0 +1,161 @@
+---
+import Logo from './Logo.astro';
+---
+
+<section class="hero" id="hero">
+  <div class="hero__content">
+    <div class="hero__logo">
+      <Logo variant="hero" />
+    </div>
+
+    <div class="hero__text">
+      <h1 class="hero__title">
+        <span class="hero__name">Seungmin</span>
+      </h1>
+      <p class="hero__tagline">Builder of digital things</p>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-text">Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg) var(--gutter);
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-md);
+  }
+
+  .hero__logo {
+    opacity: 0;
+    animation: hero-logo-in 1s var(--ease-out) 2.2s forwards;
+  }
+
+  @keyframes hero-logo-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .hero__text {
+    opacity: 0;
+    animation: hero-text-in 0.8s var(--ease-out) 2.6s forwards;
+  }
+
+  @keyframes hero-text-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero__title {
+    font-size: var(--text-2xl);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .hero__name {
+    display: block;
+  }
+
+  .hero__tagline {
+    font-size: var(--text-lg);
+    color: var(--color-muted);
+    margin: var(--space-xs) 0 0;
+  }
+
+  /* Scroll indicator */
+  .hero__scroll {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    opacity: 0;
+    animation: scroll-indicator-in 0.6s var(--ease-out) 3.2s forwards;
+  }
+
+  @keyframes scroll-indicator-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  .hero__scroll-text {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+  }
+
+  .hero__scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-muted),
+      transparent
+    );
+    animation: scroll-line 1.5s ease-in-out infinite;
+  }
+
+  @keyframes scroll-line {
+    0%, 100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scaleY(0.5);
+      opacity: 0.5;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero__logo,
+    .hero__text,
+    .hero__scroll {
+      opacity: 1;
+      animation: none;
+    }
+
+    .hero__scroll-line {
+      animation: none;
+    }
+  }
+</style>

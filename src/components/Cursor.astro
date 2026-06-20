@@ -1,0 +1,173 @@
+---
+// Custom cursor component - only active on non-touch devices
+---
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  const dot = cursor?.querySelector('.cursor__dot') as HTMLElement;
+  const ring = cursor?.querySelector('.cursor__ring') as HTMLElement;
+
+  if (cursor && dot && ring) {
+    // Check for touch device
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+      cursor.remove();
+    } else {
+      let mouseX = 0;
+      let mouseY = 0;
+      let dotX = 0;
+      let dotY = 0;
+      let ringX = 0;
+      let ringY = 0;
+
+      // Track mouse position
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      // Smooth animation loop
+      function animate() {
+        // Dot follows closely
+        dotX += (mouseX - dotX) * 0.2;
+        dotY += (mouseY - dotY) * 0.2;
+        dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+
+        // Ring follows with more lag
+        ringX += (mouseX - ringX) * 0.1;
+        ringY += (mouseY - ringY) * 0.1;
+        ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+
+      // Interactive element effects
+      const interactiveElements = document.querySelectorAll(
+        'a, button, [data-cursor="interactive"]'
+      );
+
+      interactiveElements.forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('cursor--hover');
+        });
+
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('cursor--hover');
+        });
+      });
+
+      // Hide cursor when leaving window
+      document.addEventListener('mouseleave', () => {
+        cursor.classList.add('cursor--hidden');
+      });
+
+      document.addEventListener('mouseenter', () => {
+        cursor.classList.remove('cursor--hidden');
+      });
+
+      // Click effect
+      document.addEventListener('mousedown', () => {
+        cursor.classList.add('cursor--click');
+      });
+
+      document.addEventListener('mouseup', () => {
+        cursor.classList.remove('cursor--click');
+      });
+    }
+  }
+</script>
+
+<style>
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+  }
+
+  .cursor__dot {
+    position: absolute;
+    width: var(--cursor-size, 12px);
+    height: var(--cursor-size, 12px);
+    margin-left: calc(var(--cursor-size, 12px) / -2);
+    margin-top: calc(var(--cursor-size, 12px) / -2);
+    background: white;
+    border-radius: 50%;
+    transition:
+      width 0.3s var(--ease-out),
+      height 0.3s var(--ease-out),
+      margin 0.3s var(--ease-out),
+      opacity 0.3s var(--ease-out);
+  }
+
+  .cursor__ring {
+    position: absolute;
+    width: var(--cursor-ring-size, 40px);
+    height: var(--cursor-ring-size, 40px);
+    margin-left: calc(var(--cursor-ring-size, 40px) / -2);
+    margin-top: calc(var(--cursor-ring-size, 40px) / -2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition:
+      width 0.3s var(--ease-out),
+      height 0.3s var(--ease-out),
+      margin 0.3s var(--ease-out),
+      border-color 0.3s var(--ease-out),
+      opacity 0.3s var(--ease-out);
+  }
+
+  /* Hover state */
+  .cursor--hover .cursor__dot {
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: -4px;
+  }
+
+  .cursor--hover .cursor__ring {
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Click state */
+  .cursor--click .cursor__dot {
+    transform: scale(0.8);
+  }
+
+  .cursor--click .cursor__ring {
+    transform: scale(0.9);
+  }
+
+  /* Hidden state */
+  .cursor--hidden .cursor__dot,
+  .cursor--hidden .cursor__ring {
+    opacity: 0;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .cursor {
+      display: none;
+    }
+  }
+
+  /* Hide on touch devices (backup) */
+  @media (hover: none) and (pointer: coarse) {
+    .cursor {
+      display: none;
+    }
+  }
+</style>
