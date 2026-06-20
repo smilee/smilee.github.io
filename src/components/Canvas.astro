@@ -1,0 +1,171 @@
+---
+// Experimental canvas background with flowing noise field
+---
+
+<canvas class="canvas-bg" id="canvas-bg" aria-hidden="true"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas-bg') as HTMLCanvasElement;
+
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (ctx && !prefersReducedMotion) {
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let mouseX = width / 2;
+      let mouseY = height / 2;
+      let animationId: number;
+      let isVisible = true;
+
+      // Particle system
+      const particles: Array<{
+        x: number;
+        y: number;
+        vx: number;
+        vy: number;
+        size: number;
+        opacity: number;
+      }> = [];
+
+      const particleCount = Math.min(50, Math.floor((width * height) / 25000));
+
+      // Initialize particles
+      function initParticles() {
+        particles.length = 0;
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            size: Math.random() * 2 + 1,
+            opacity: Math.random() * 0.3 + 0.1,
+          });
+        }
+      }
+
+      // Resize handler
+      function resize() {
+        const dpr = window.devicePixelRatio || 1;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        ctx.scale(dpr, dpr);
+        initParticles();
+      }
+
+      // Animation loop
+      function animate() {
+        if (!isVisible) {
+          animationId = requestAnimationFrame(animate);
+          return;
+        }
+
+        ctx.clearRect(0, 0, width, height);
+
+        // Get stroke color from CSS variable
+        const computedStyle = getComputedStyle(document.documentElement);
+        const strokeColor = computedStyle.getPropertyValue('--color-text').trim() || '#1a1a1a';
+
+        // Update and draw particles
+        particles.forEach((p, i) => {
+          // Subtle mouse influence
+          const dx = mouseX - p.x;
+          const dy = mouseY - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const maxDist = 200;
+
+          if (dist < maxDist) {
+            const force = (1 - dist / maxDist) * 0.02;
+            p.vx += (dx / dist) * force;
+            p.vy += (dy / dist) * force;
+          }
+
+          // Apply velocity with friction
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vx *= 0.99;
+          p.vy *= 0.99;
+
+          // Wrap around edges
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          // Draw particle
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = strokeColor;
+          ctx.globalAlpha = p.opacity;
+          ctx.fill();
+
+          // Draw connections to nearby particles
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx2 = p.x - p2.x;
+            const dy2 = p.y - p2.y;
+            const dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+
+            if (dist2 < 120) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = strokeColor;
+              ctx.globalAlpha = (1 - dist2 / 120) * 0.1;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        });
+
+        ctx.globalAlpha = 1;
+        animationId = requestAnimationFrame(animate);
+      }
+
+      // Track mouse position
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      // Pause when tab not visible
+      document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+      });
+
+      // Handle resize
+      window.addEventListener('resize', resize);
+
+      // Initialize
+      resize();
+      animate();
+    }
+  }
+</script>
+
+<style>
+  .canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .canvas-bg {
+      display: none;
+    }
+  }
+</style>

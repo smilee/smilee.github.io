@@ -1,0 +1,66 @@
+---
+import Logo from './Logo.astro';
+---
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__content">
+    <Logo variant="loader" />
+  </div>
+</div>
+
+<script>
+  const loader = document.getElementById('loader');
+
+  // Check if this is the first visit this session
+  const hasVisited = sessionStorage.getItem('hasVisited');
+
+  if (hasVisited) {
+    // Skip loader on subsequent visits
+    loader?.remove();
+  } else {
+    // Show loader, then fade out
+    sessionStorage.setItem('hasVisited', 'true');
+
+    // Wait for logo animation to complete, then fade out
+    setTimeout(() => {
+      loader?.classList.add('loader--hidden');
+
+      // Remove from DOM after fade transition
+      setTimeout(() => {
+        loader?.remove();
+      }, 600);
+    }, 2200);
+  }
+</script>
+
+<style>
+  .loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    transition: opacity 0.6s var(--ease-out), visibility 0.6s var(--ease-out);
+  }
+
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loader__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Reduced motion: hide loader immediately */
+  @media (prefers-reduced-motion: reduce) {
+    .loader {
+      display: none;
+    }
+  }
+</style>
