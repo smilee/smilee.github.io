@@ -23,61 +23,59 @@ const { width, height } = sizes[variant];
   xmlns="http://www.w3.org/2000/svg"
   aria-label="Seungmin logo"
 >
-  <!-- Path 1: Top loop through left loop -->
-  <path
-    class="logo__path logo__path--1"
-    d="M13.98,11.874
-      c3.65,0,6.813-4.848,4.356-7.936c-1.016-1.276-2.699-1.595-4.247-1.606c-2.557-0.017-5.051,1.843-5.882,4.232
-      c-1.43,4.111,3.831,6.32,4.57,9.979c0.466,2.306-0.805,4.905-3.262,5.291C8.457,22,7.371,21.783,6.357,21.434
-      c-0.886-0.305-1.743-0.715-2.48-1.292c-1.189-0.93-2.016-2.274-1.831-3.821C2.204,14.99,3.04,13.78,4.17,13.079
-      c0.518-0.322,1.102-0.538,1.709-0.613"
-  />
+  <!-- Main curves group -->
+  <g>
+    <!-- Path 1: S curve -->
+    <path
+      class="logo__path logo__path--1"
+      d="M14,11.9c3,0,5.5-3.1,5.2-6-.2-1.4-1.1-2.4-2.3-3-1.1-.5-2.3-.7-3.4-.5-1.3.2-2.5.8-3.4,1.6-.8.7-1.5,1.6-1.8,2.6-.5,1.6,0,3.2.9,4.5s1.6,1.9,2.3,2.9c1.1,1.6,1.8,3.6,1,5.4-1,2.2-3.4,2.8-5.7,2.2-2.3-.6-5.1-2.5-4.8-5.2.2-1.3,1-2.5,2.1-3.2.5-.3,1.1-.5,1.7-.6"
+    />
 
-  <!-- Path 2: Right loop through tail -->
-  <path
-    class="logo__path logo__path--2"
-    d="M15.992,18.453
-      c1.296,1.586,2.941,2.981,4.935,3.106c1.552,0.097,3.086-0.745,3.988-2.011c0.902-1.266,1.207-2.901,1.008-4.443
-      c-0.167-1.301-0.807-2.681-1.975-3.366c-3.924-2.302-7.257,4.918-8.338,7.554c-1.173,2.86-2.043,5.857-3.533,8.564
-      c-0.376,0.683-0.838,1.387-1.562,1.677c-0.698,0.28-1.529,0.1-2.126-0.357c-1.203-0.92-1.62-2.827-0.347-3.889
-      c1.762-1.47,3.934,0.862,5.323,1.788c1.123,0.748,3.475,2.78,5.026,2.299"
-  />
+    <!-- Path 2: L curve -->
+    <path
+      class="logo__path logo__path--2"
+      d="M15.1,18.6c1.3,1.6,3.7,2.9,5.7,3,1.6,0,3.2-.7,4.1-2,.9-1.3,1.2-2.9,1-4.4-.2-1.3-.8-2.7-2-3.4-2.4-1.4-4.9.9-6.4,2.7-2.2,2.8-3.5,6.2-4.7,9.5-.1.4-.3.8-.4,1.1-.4,1-.7,2-1.2,2.8s-1.4,1.8-2.5,1.6c-1.7-.4-1.9-3.3-.7-4.3,1.4-1.2,3.1.2,4.3,1.1,2.2,1.6,5.2,3.7,8.1,3.1"
+    />
+  </g>
 
-  <!-- Connector 1: Left diagonal -->
-  <path
-    class="logo__path logo__connector logo__connector--1"
-    d="M13.117,11.726 c-1.099,1.851-3.03,4.304-4.552,6.082"
-  />
+  <!-- Nodes group (renders on top) -->
+  <g>
+    <!-- Circle: Top -->
+    <circle
+      class="logo__circle logo__circle--top"
+      cx="14"
+      cy="9.6"
+      r="2.3"
+    />
 
-  <!-- Connector 2: Right diagonal -->
-  <path
-    class="logo__path logo__connector logo__connector--2"
-    d="M19.396,17.808 c-1.522-1.778-3.453-4.231-4.552-6.083"
-  />
+    <!-- Connector 1: Left curved -->
+    <path
+      class="logo__path logo__connector logo__connector--1"
+      d="M11.8,10.4c-2.7,1.5-4.2,4.3-4.6,7.4"
+    />
 
-  <!-- Circle: Left -->
-  <circle
-    class="logo__circle logo__circle--left"
-    cx="7.137"
-    cy="19.407"
-    r="2.144"
-  />
+    <!-- Circle: Left -->
+    <circle
+      class="logo__circle logo__circle--left"
+      cx="7.1"
+      cy="19.7"
+      r="1.9"
+    />
 
-  <!-- Circle: Right -->
-  <circle
-    class="logo__circle logo__circle--right"
-    cx="20.824"
-    cy="19.407"
-    r="2.144"
-  />
+    <!-- Connector 2: Right curved -->
+    <path
+      class="logo__path logo__connector logo__connector--2"
+      d="M16.2,10.4c2.7,1.5,4.2,4.3,4.6,7.4"
+    />
 
-  <!-- Circle: Top (larger) -->
-  <circle
-    class="logo__circle logo__circle--top"
-    cx="13.981"
-    cy="9.26"
-    r="2.612"
-  />
+    <!-- Circle: Right -->
+    <circle
+      class="logo__circle logo__circle--right"
+      cx="20.8"
+      cy="19.7"
+      r="1.9"
+    />
+  </g>
 </svg>
 
 <style>
@@ -90,67 +88,64 @@ const { width, height } = sizes[variant];
   .logo__circle {
     fill: none;
     stroke: var(--logo-stroke);
+    stroke-width: 0.8px;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
 
-  /* ========== Loader Variant: Sketch Draw-on ========== */
+  /* ========== Loader Variant: Sketch everything ========== */
+
+  /* Path 1: S curve - draws first */
   .logo--loader .logo__path--1 {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
-    animation: sketch-path-1 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+    animation: sketch-draw 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
   }
 
+  /* Path 2: L curve - draws second */
   .logo--loader .logo__path--2 {
     stroke-dasharray: 120;
     stroke-dashoffset: 120;
-    animation: sketch-path-2 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+    animation: sketch-draw 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.7s forwards;
   }
 
-  .logo--loader .logo__connector--1 {
-    stroke-dasharray: 20;
-    stroke-dashoffset: 20;
-    animation: sketch-connector 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.1s forwards;
-  }
-
-  .logo--loader .logo__connector--2 {
-    stroke-dasharray: 20;
-    stroke-dashoffset: 20;
-    animation: sketch-connector 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;
-  }
-
-  .logo--loader .logo__circle--left {
-    stroke-dasharray: 13.5;
-    stroke-dashoffset: 13.5;
-    animation: sketch-circle 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.5s forwards;
-  }
-
-  .logo--loader .logo__circle--right {
-    stroke-dasharray: 13.5;
-    stroke-dashoffset: 13.5;
-    animation: sketch-circle 0.6s cubic-bezier(0.4, 0, 0.2, 1) 1.0s forwards;
-  }
-
+  /* Top circle - sketches after main curves */
   .logo--loader .logo__circle--top {
-    stroke-dasharray: 16.4;
-    stroke-dashoffset: 16.4;
-    animation: sketch-circle 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
+    stroke-dasharray: 14.5; /* 2 * PI * 2.3 */
+    stroke-dashoffset: 14.5;
+    animation: sketch-draw 0.4s cubic-bezier(0.4, 0, 0.2, 1) 1.4s forwards;
   }
 
-  @keyframes sketch-path-1 {
-    to { stroke-dashoffset: 0; }
+  /* Left connector - sketches from top circle */
+  .logo--loader .logo__connector--1 {
+    stroke-dasharray: 12;
+    stroke-dashoffset: 12;
+    animation: sketch-draw 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1.6s forwards;
   }
 
-  @keyframes sketch-path-2 {
-    to { stroke-dashoffset: 0; }
+  /* Left circle - sketches at end of left connector */
+  .logo--loader .logo__circle--left {
+    stroke-dasharray: 12; /* 2 * PI * 1.9 */
+    stroke-dashoffset: 12;
+    animation: sketch-draw 0.35s cubic-bezier(0.4, 0, 0.2, 1) 1.8s forwards;
   }
 
-  @keyframes sketch-connector {
-    to { stroke-dashoffset: 0; }
+  /* Right connector - sketches from top circle */
+  .logo--loader .logo__connector--2 {
+    stroke-dasharray: 12;
+    stroke-dashoffset: 12;
+    animation: sketch-draw 0.3s cubic-bezier(0.4, 0, 0.2, 1) 1.65s forwards;
   }
 
-  @keyframes sketch-circle {
+  /* Right circle - sketches at end of right connector */
+  .logo--loader .logo__circle--right {
+    stroke-dasharray: 12; /* 2 * PI * 1.9 */
+    stroke-dashoffset: 12;
+    animation: sketch-draw 0.35s cubic-bezier(0.4, 0, 0.2, 1) 1.85s forwards;
+  }
+
+  @keyframes sketch-draw {
     to { stroke-dashoffset: 0; }
   }
 
