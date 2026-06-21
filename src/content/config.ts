@@ -8,6 +8,7 @@ const caseStudies = defineCollection({
     description: z.string().optional(),
     domain: z.string(),
     order: z.number(),
+    ogImage: z.string().optional(),
   }),
 });
 

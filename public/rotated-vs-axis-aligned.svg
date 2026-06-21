@@ -1,0 +1,45 @@
+<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <!-- background -->
+  <rect width="760" height="440" fill="#ffffff"/>
+  <!-- palette: object #2b2f3a · noise #efb4ab / #cf5440 · tight #2e7d52 · text #3a3f4a · faint #b9bec9 -->
+
+  <!-- ===== Titles ===== -->
+  <text x="200" y="44" text-anchor="middle" font-size="20" font-weight="600" fill="#2b2f3a">Axis-aligned box</text>
+  <text x="560" y="44" text-anchor="middle" font-size="20" font-weight="600" fill="#2b2f3a">Rotated box</text>
+
+  <!-- ===== LEFT: axis-aligned ===== -->
+  <!-- AABB filled red = everything the label claims is "object" -->
+  <rect x="115.5" y="144" width="169" height="132" rx="3" fill="#efb4ab" stroke="#cf5440" stroke-width="2"/>
+  <!-- the actual object, angled, drawn on top; red showing in the corners is the label noise -->
+  <rect x="120" y="180" width="160" height="60" rx="12" transform="rotate(30 200 210)" fill="#2b2f3a"/>
+
+  <!-- leader pointing at a noise corner -->
+  <line x1="300" y1="150" x2="272" y2="168" stroke="#cf5440" stroke-width="1.5"/>
+  <circle cx="272" cy="168" r="2.5" fill="#cf5440"/>
+  <text x="304" y="146" font-size="12.5" fill="#cf5440" font-weight="600">background</text>
+  <text x="304" y="162" font-size="12.5" fill="#cf5440" font-weight="600">labeled as object</text>
+
+  <text x="200" y="320" text-anchor="middle" font-size="13.5" fill="#3a3f4a">An upright box around an angled object</text>
+  <text x="200" y="339" text-anchor="middle" font-size="13.5" fill="#3a3f4a">fills the corners with systematic noise.</text>
+
+  <!-- ===== RIGHT: rotated ===== -->
+  <!-- faint dashed AABB = what an upright box would have grabbed, for contrast -->
+  <rect x="475.5" y="144" width="169" height="132" rx="3" fill="none" stroke="#b9bec9" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <!-- tight rotated box hugging the object -->
+  <rect x="476" y="176" width="168" height="68" rx="8" transform="rotate(30 560 210)" fill="none" stroke="#2e7d52" stroke-width="2.5"/>
+  <!-- the object -->
+  <rect x="480" y="180" width="160" height="60" rx="12" transform="rotate(30 560 210)" fill="#2b2f3a"/>
+
+  <!-- leader noting the saved area -->
+  <text x="648" y="146" font-size="12.5" fill="#9aa0ac" font-weight="600" text-anchor="end">— what an upright</text>
+  <text x="648" y="162" font-size="12.5" fill="#9aa0ac" font-weight="600" text-anchor="end">box would grab</text>
+
+  <text x="560" y="320" text-anchor="middle" font-size="13.5" fill="#3a3f4a">A box matched to the object's true angle</text>
+  <text x="560" y="339" text-anchor="middle" font-size="13.5" fill="#3a3f4a">fits tight — almost no noise.</text>
+
+  <!-- ===== legend ===== -->
+  <rect x="250" y="392" width="14" height="14" rx="2" fill="#efb4ab" stroke="#cf5440" stroke-width="1.5"/>
+  <text x="270" y="404" font-size="13" fill="#3a3f4a">label noise (not the object)</text>
+  <rect x="470" y="392" width="14" height="14" rx="2" fill="#2b2f3a"/>
+  <text x="490" y="404" font-size="13" fill="#3a3f4a">the object</text>
+</svg>

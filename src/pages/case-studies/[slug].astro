@@ -24,6 +24,7 @@ const { Content } = await study.render();
 <Base
   title={`${study.data.title} — Seungmin`}
   description={study.data.description || study.data.tagline}
+  ogImage={study.data.ogImage}
 >
   <Cursor />
   <Nav />
