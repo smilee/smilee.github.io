@@ -48,11 +48,15 @@ h6 {
 
 /* ========== Design Tokens ========== */
 :root {
+  /* Brand colors */
+  --color-brand: #1E5B43;
+  --color-brand-deep: #143D2D;
+
   /* Colors */
-  --color-bg: #fafafa;
-  --color-text: #1a1a1a;
-  --color-accent: #424242;
-  --color-muted: #595959; /* WCAG AA contrast ratio 7:1 on #fafafa */
+  --color-bg: #F6F4EE;
+  --color-text: #1C1C1B;
+  --color-accent: #1E5B43;
+  --color-muted: #6E6C66;
   --color-subtle: #e5e5e5;
 
   /* Typography */
@@ -98,11 +102,12 @@ h6 {
 
 /* Dark mode */
 .dark {
-  --color-bg: #0a0a0a;
-  --color-text: #f5f5f5;
-  --color-accent: #a0a0a0;
-  --color-muted: #9a9a9a; /* WCAG AA contrast ratio 7:1 on #0a0a0a */
-  --color-subtle: #1a1a1a;
+  --color-bg: #1C1C1B;
+  --color-text: #F6F4EE;
+  --color-brand: #4FA37D;
+  --color-accent: #4FA37D;
+  --color-muted: #9a9a9a;
+  --color-subtle: #2a2a28;
 }
 
 /* ========== Base Styles ========== */
