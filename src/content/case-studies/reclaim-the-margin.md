@@ -8,23 +8,23 @@ order: 1
 slug: "reclaim-the-margin"
 ---
 
-*One idea, three forms, two platforms abandoned — until it stopped being a luxury and started being survival.*
+*One idea, three forms. The first felt like work, the second like a luxury — until the third made it survival.*
 
 I funded, designed, and built this myself — concept through Kickstarter through ship. Across its life it was a web service, then a mobile game, then a tabletop game. What stayed constant was the core idea: turning your inner life — what you want, what you're carrying, what you're trying to protect — into something you actively play rather than passively manage. What changed, twice, was the form. And the reason it had to change is the whole story.
 
 ## Form one: "your wishes become quests."
 
-It started as a coaching web service — you'd name what you wanted, and the system turned those wishes into quests to pursue. It worked on paper and didn't work in practice: most players didn't return after the first session. The instinct in that moment is to assume you built it wrong and start fixing surfaces. I resisted that. Low retention rarely means the thing is broken — it usually means the reason to come back isn't strong enough. So I treated the concept as a hypothesis to validate, not a product to defend.
+It started as a coaching web service — you'd name what you wanted, and the system turned those wishes into quests to pursue. It worked on paper and didn't work in practice: most players didn't return after the first session. When I looked at why, the answer was that it felt like *work.* Turning your wishes into quests made them one more obligation — another task on the pile. People don't come back for more homework. The instinct in that moment is to assume you built it wrong and start fixing surfaces. I resisted that. Low retention rarely means the thing is broken — it usually means the reason to come back isn't the right kind of reason. So I treated the concept as a hypothesis to validate, not a product to defend.
 
 ## Form two: "tend your garden of inner thoughts."
 
-My first bet was that the core was sound and just needed more pull, so I rebuilt it as a mobile game — gamifying the concept into a garden of your inner thoughts that you'd tend over time. There were real signs of life: I showed it at the Daegu Content & Creator Fair in 2025, and one visitor came back to the booth a second time the same day. But the more valuable result wasn't that moment — it was what players said around it. The recurring sentiment: it felt like *a luxury.* Something nice to have. An indulgence.
+Reading "it feels like work," my bet was that the fix was to make it lighter — so I rebuilt it as a mobile game, gamifying the concept into a garden of your inner thoughts that you'd tend over time. There were real signs of life: I showed it at the Daegu Content & Creator Fair in 2025, and one visitor came back to the booth a second time the same day. But the more valuable result wasn't that moment — it was what players said around it. The recurring sentiment: it felt like *a luxury.* Something nice to have. An indulgence.
 
-That word reframed the entire problem — and in hindsight the metaphor had told me in advance. A garden you tend *is* a luxury: optional, aspirational, the first thing dropped from a busy life. The booth revisit was real pull, but it was the pull of something pleasant, not something needed — and pleasant doesn't retain. I'd gamified the concept but kept its motivation aspirational, and aspiration was the retention problem all along. No amount of polish fixes "optional," because polish makes a luxury nicer, not necessary. I'd changed the format and preserved the exact thing that was broken.
+That word reframed everything — I'd overshot. In trying to escape "work," I'd sailed clean past the target into "luxury." A garden you tend is optional, aspirational, the first thing dropped from a busy life. The booth revisit was real pull, but it was the pull of something pleasant, not something needed — and pleasant doesn't retain any better than a chore does. Work was too heavy to come back to; luxury was too light to bother with. Neither gave anyone a reason they *couldn't* ignore — and no amount of polish fixes that, because polish only makes a luxury nicer.
 
 ## Form three: "reclaim the margin."
 
-So I made the decisive call — not to add more, but to invert the stakes. I kept the core concept and rebuilt it a third time, now as a tactical survival solo TTRPG. You start with almost nothing — three margin slots out of twenty-one — and the whole game is the fight to win the rest back without losing what you've clawed up. That structure runs two motivations at once: the pull of reclaiming what you're missing, and the fear of giving back what you've earned. Aspiration alone is easy to postpone; a deficit you're actively climbing out of, with every gain now at risk, is not. Survival, loss-aversion, *and* the pull of recovery create a reason to come back that "this is enjoyable" never will — you don't put down a game where you're behind and climbing.
+So I stopped adjusting the surface and changed the stakes. I kept the core concept and rebuilt it a third time, now as a tactical survival solo TTRPG. You start with almost nothing — three margin slots out of twenty-one — and the whole game is the fight to reclaim the rest without losing what you've clawed back. That's the center between the two failures: not a chore you're obligated to grind, not a treat you can skip, but a situation you can't look away from. Two motivations run at once — the pull of reclaiming what you're missing, and the fear of giving back what you've earned. Obligation is easy to resent; indulgence is easy to postpone; a deficit you're actively climbing out of, with every gain now at risk, is neither. You don't put down a game where you're behind and climbing.
 
 ## What shipped.
 
@@ -32,4 +32,4 @@ The survival version is what I took through Kickstarter and shipped: $1,000 fund
 
 ## What I'd do differently.
 
-I'd test the *motivation* before rebuilding the *form.* I changed platforms twice — web to mobile to tabletop — while carrying the same aspirational framing through each one, and the framing was the real problem the entire time. I was loyal to the right thing (the concept) but slow to question the thing I should have (the motivation). Now I pressure-test *why someone comes back* before I invest in *what they come back to.*
+I'd stop treating two different failures as the same one. The service felt like work; the game felt like a luxury — opposite misses — and for too long I read them as a single generic "low retention" problem and kept adjusting the surface. The real variable was never polish; it was the stakes. Too much obligation and too much comfort fail the same way: both are easy to walk away from. Now I pressure-test the stakes — the reason someone *can't* walk away — before I invest in the form.

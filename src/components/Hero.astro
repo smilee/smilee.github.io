@@ -176,6 +176,13 @@ import Logo from './Logo.astro';
     }
   }
 
+  /* Hide scroll indicator on mobile */
+  @media (max-width: 640px) {
+    .hero__scroll {
+      display: none;
+    }
+  }
+
   /* Reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .hero__logo,
