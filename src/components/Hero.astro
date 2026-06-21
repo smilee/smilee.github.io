@@ -9,10 +9,14 @@ import Logo from './Logo.astro';
     </div>
 
     <div class="hero__text">
-      <h1 class="hero__title">
-        <span class="hero__name">Seungmin</span>
-      </h1>
-      <p class="hero__tagline">Builder of digital things</p>
+      <h1 class="hero__title">I take products from nothing to shipped</h1>
+      <p class="hero__tagline">Designer who codes. Developer who designs.</p>
+      <a href="#work" class="hero__cta" data-cursor="interactive">
+        <span>See selected work</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
     </div>
   </div>
 
@@ -75,20 +79,47 @@ import Logo from './Logo.astro';
   }
 
   .hero__title {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     font-weight: 500;
     letter-spacing: -0.02em;
     margin: 0;
-  }
-
-  .hero__name {
-    display: block;
+    text-align: center;
   }
 
   .hero__tagline {
     font-size: var(--text-lg);
     color: var(--color-muted);
     margin: var(--space-xs) 0 0;
+  }
+
+  .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-subtle);
+    border-radius: 4px;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .hero__cta:hover {
+    color: var(--color-text);
+    border-color: var(--color-muted);
+    background: var(--color-subtle);
+  }
+
+  .hero__cta svg {
+    transition: transform 0.2s var(--ease-out);
+  }
+
+  .hero__cta:hover svg {
+    transform: translateY(2px);
   }
 
   /* Scroll indicator */

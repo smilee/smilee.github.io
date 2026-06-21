@@ -1,0 +1,149 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import Cursor from '../../components/Cursor.astro';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies');
+  return caseStudies.map((study) => ({
+    params: { slug: study.slug },
+    props: { study },
+  }));
+}
+
+interface Props {
+  study: CollectionEntry<'case-studies'>;
+}
+
+const { study } = Astro.props;
+const { Content } = await study.render();
+---
+
+<Base
+  title={`${study.data.title} — Seungmin`}
+  description={study.data.description || study.data.tagline}
+>
+  <Cursor />
+  <Nav />
+
+  <article class="case-study">
+    <header class="case-study__header reveal">
+      <a href="/#work" class="case-study__back" data-cursor="interactive">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back to Work</span>
+      </a>
+      <h1 class="case-study__title">{study.data.title}</h1>
+      <p class="case-study__tagline">{study.data.tagline}</p>
+    </header>
+
+    <div class="case-study__content reveal">
+      <Content />
+    </div>
+  </article>
+
+  <Footer />
+
+  <script>
+    import '../../scripts/scroll.ts';
+  </script>
+</Base>
+
+<style>
+  .case-study {
+    padding: var(--space-lg) var(--gutter);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .case-study__header {
+    padding-top: var(--space-xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .case-study__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+    transition: color 0.2s ease;
+  }
+
+  .case-study__back:hover {
+    color: var(--color-text);
+  }
+
+  .case-study__title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .case-study__tagline {
+    font-size: var(--text-lg);
+    color: var(--color-muted);
+  }
+
+  /* Markdown content styling */
+  .case-study__content {
+    line-height: 1.7;
+  }
+
+  .case-study__content :global(h2) {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-subtle);
+  }
+
+  .case-study__content :global(h2:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .case-study__content :global(p) {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-md);
+    max-width: 65ch;
+  }
+
+  .case-study__content :global(ul),
+  .case-study__content :global(ol) {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-md);
+  }
+
+  .case-study__content :global(li) {
+    margin-bottom: var(--space-xs);
+  }
+
+  .case-study__content :global(strong) {
+    font-weight: 500;
+  }
+
+  .case-study__content :global(blockquote) {
+    border-left: 2px solid var(--color-accent);
+    padding-left: var(--space-md);
+    margin: var(--space-md) 0;
+    color: var(--color-muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .case-study__title {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

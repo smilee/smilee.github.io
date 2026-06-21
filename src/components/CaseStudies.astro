@@ -1,0 +1,122 @@
+---
+import { getCollection } from 'astro:content';
+
+const caseStudies = await getCollection('case-studies');
+const sortedStudies = caseStudies.sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="case-studies" id="work">
+  <div class="case-studies__container">
+    <h2 class="case-studies__heading reveal">Selected Work</h2>
+
+    <ul class="case-studies__list stagger">
+      {sortedStudies.map((study) => (
+        <li class="case-studies__item">
+          <a
+            href={`/case-studies/${study.slug}`}
+            class="case-studies__link"
+            data-cursor="interactive"
+          >
+            <span class="case-studies__title">{study.data.title}</span>
+            <span class="case-studies__tagline">{study.data.tagline}</span>
+            <svg
+              class="case-studies__arrow"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .case-studies {
+    padding: var(--space-xl) var(--gutter);
+  }
+
+  .case-studies__container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .case-studies__heading {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+  }
+
+  .case-studies__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-studies__item {
+    border-top: 1px solid var(--color-subtle);
+  }
+
+  .case-studies__item:last-child {
+    border-bottom: 1px solid var(--color-subtle);
+  }
+
+  .case-studies__link {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: var(--space-xs) var(--space-md);
+    padding: var(--space-md) 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .case-studies__link:hover {
+    opacity: 0.7;
+  }
+
+  .case-studies__link:hover .case-studies__arrow {
+    transform: translateX(4px);
+  }
+
+  .case-studies__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 500;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .case-studies__tagline {
+    font-size: var(--text-base);
+    color: var(--color-muted);
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .case-studies__arrow {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    color: var(--color-muted);
+    transition: transform 0.2s var(--ease-out);
+  }
+
+  @media (max-width: 640px) {
+    .case-studies__title {
+      font-size: var(--text-lg);
+    }
+  }
+</style>
